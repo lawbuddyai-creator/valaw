@@ -6,6 +6,7 @@
   --muted: #b7c0d6;
   --link: #9cc4ff;
   --accent: #4ea3ff;
+  --primary: var(--accent);
   --accent-2: #7cf0c3;
   --border: rgba(255,255,255,.10);
   --shadow: 0 10px 30px rgba(0,0,0,.35);
@@ -246,4 +247,23 @@ footer{
   .card{ grid-column: span 12; }
   nav ul{ gap: 6px; }
   nav a{ padding: 8px 10px; }
+}
+
+
+/* Legacy layout helpers (existing markup) */
+.cards{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 12px;
+}
+.cards .card{
+  grid-column: 1 / -1;
+}
+.hero{
+  background: linear-gradient(135deg, rgba(78,163,255,.10), rgba(124,240,195,.08));
+  border-bottom: 1px solid var(--border);
+}
+.hero .container{
+  padding: 26px 0 0;
 }
