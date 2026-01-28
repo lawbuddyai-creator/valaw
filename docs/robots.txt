@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lawbuddyai-creator.github.io/valaw/sitemap.xml
