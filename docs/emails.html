@@ -4,9 +4,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Cold email templates for students reaching out to delegates, legislators, attorneys, and legal professionals.">
-  <title>VALaw Careers • Outreach Emails</title>
+  <meta name="description" content="Copy-ready outreach emails for legislators, attorneys, nonprofits, and internships.">
+  <title>VALaw Careers • Emails</title>
   <link rel="stylesheet" href="style.css">
+
+  <meta property="og:title" content="VALaw Careers • Emails">
+  <meta property="og:description" content="Copy-ready outreach emails for legislators, attorneys, nonprofits, and internships.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lawbuddyai-creator.github.io/valaw/emails.html">
+  <meta property="og:image" content="https://lawbuddyai-creator.github.io/valaw/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VALaw Careers • Emails">
+  <meta name="twitter:description" content="Copy-ready outreach emails for legislators, attorneys, nonprofits, and internships.">
+  <meta name="twitter:image" content="https://lawbuddyai-creator.github.io/valaw/og.png">
 </head>
 
 <body>
@@ -28,8 +38,8 @@
         <li><a href="classes.html" class="">Classes</a></li>
         <li><a href="extracurriculars.html" class="">Extracurriculars</a></li>
         <li><a href="colleges.html" class="">Colleges</a></li>
-        <li><a href="resources.html" class="active">Resources</a></li>
-          <li><a href="emails.html">Emails</a></li>
+        <li><a href="resources.html" class="">Resources</a></li>
+          <li><a href="emails.html" class="active">Emails</a></li>
         <li><a href="about.html" class="">About</a></li>
         <li><a href="contact.html" class="">Contact</a></li>
       </ul>
@@ -44,11 +54,12 @@
     <section class="hero">
       <h1>Outreach Email Templates</h1>
       <p>
-        Want to learn from real professionals? A respectful, clear email can open doors.
-        Use these templates to reach out to delegates, legislators, attorneys, judges, and organizations.
+        A respectful, clear email can open doors. Use these templates to reach out to legislators, attorneys, nonprofits,
+        and internship programs. Keep it short, specific, and polite.
       </p>
-      <div class="callout" style="margin-top:14px;">
-        <strong>Quick rule:</strong> Keep it short, specific, and polite. Proofread before you send.
+      <div class="cta">
+        <button class="button primary" type="button" onclick="printTemplates()">Print / Save as PDF</button>
+        <a class="button" href="contact.html">Suggest an improvement →</a>
       </div>
     </section>
 
@@ -57,16 +68,25 @@
       <ul>
         <li>Use a professional email address (your name if possible).</li>
         <li>Keep it under ~200 words.</li>
-        <li>Say why you chose <em>them</em> (location, committee, practice area, casework, etc.).</li>
+        <li>Say why you chose <em>them</em> (district, committee, practice area, program, etc.).</li>
         <li>Ask for one clear thing: a short call, a few questions by email, or permission to attend an event.</li>
-        <li>If you attach a resume, mention it in one line (and name the file clearly).</li>
+        <li>Follow up once after 7–10 days if you hear nothing.</li>
       </ul>
     </section>
 
     <section class="section">
-      <h2>Template 1: Delegate / Legislator</h2>
-      <pre>
-Subject: Virginia student hoping to learn about public service
+      <h2>Templates</h2>
+      <div class="template-grid">
+
+        <div class="template-card">
+          <div class="template-head">
+            <div>
+              <h2>1) Delegate / Legislator</h2>
+              <p title="Use this when you want to learn about public service or a local issue.">Best for: informational interview about public service</p>
+            </div>
+            <button class="copy-btn" type="button" data-copy="t1" onclick="copyTemplate('t1')" title="Copy this template">Copy</button>
+          </div>
+          <div class="codebox" id="t1">Subject: Virginia student hoping to learn about public service
 
 Hello Delegate [Last Name],
 
@@ -78,14 +98,18 @@ Thank you for your time and for serving our community.
 
 Sincerely,
 [Your Full Name]
-[School Name] • [City, VA]
-      </pre>
-    </section>
+[School Name] • [City, VA]</div>
+        </div>
 
-    <section class="section">
-      <h2>Template 2: Attorney / Law firm (informational interview)</h2>
-      <pre>
-Subject: Student interested in learning about [Practice Area]
+        <div class="template-card">
+          <div class="template-head">
+            <div>
+              <h2>2) Attorney / Law firm</h2>
+              <p title="Use this to request a short informational interview or shadowing.">Best for: informational interview or shadowing request</p>
+            </div>
+            <button class="copy-btn" type="button" data-copy="t2" onclick="copyTemplate('t2')" title="Copy this template">Copy</button>
+          </div>
+          <div class="codebox" id="t2">Subject: Student interested in learning about [Practice Area]
 
 Hello Mr./Ms. [Last Name],
 
@@ -97,31 +121,64 @@ Thank you for considering my request.
 
 Best regards,
 [Your Full Name]
-[School Name] • [City, VA]
-      </pre>
-    </section>
+[School Name] • [City, VA]</div>
+        </div>
 
-    <section class="section">
-      <h2>Template 3: Judge / Court professional (extra formal)</h2>
-      <pre>
-Subject: Student inquiry about the court system
+        <div class="template-card">
+          <div class="template-head">
+            <div>
+              <h2>3) Nonprofit / Advocacy organization</h2>
+              <p title="Use this to ask about volunteering, youth programs, or learning opportunities.">Best for: volunteering or youth program inquiry</p>
+            </div>
+            <button class="copy-btn" type="button" data-copy="t3" onclick="copyTemplate('t3')" title="Copy this template">Copy</button>
+          </div>
+          <div class="codebox" id="t3">Subject: Student interested in supporting [Organization Name]
 
-Dear Judge [Last Name],
+Hello [Name/Team],
 
-My name is [Your Name], and I am a high school student in [City], Virginia with a strong interest in law and the judicial system.
+My name is [Your Name], and I’m a high school student in [City], Virginia interested in [topic: civil rights / environment / community service].
 
-If permitted, I would be grateful for any general guidance about how students can learn more about court operations or prepare for careers in law. I understand your schedule is very busy and appreciate any direction you can provide.
+I’m reaching out because I admire your work on [specific program or issue]. Are there any student-friendly ways to get involved (volunteering, events, youth programs, or educational materials)?
 
-Respectfully,
+Thank you for your time and for the work you do.
+
+Sincerely,
 [Your Full Name]
-[School Name] • [City, VA]
-      </pre>
-    </section>
+[School Name] • [City, VA]</div>
+        </div>
 
-    <section class="section">
-      <h2>Follow‑up (if you hear nothing after 7–10 days)</h2>
-      <pre>
-Subject: Follow‑up — student request
+        <div class="template-card">
+          <div class="template-head">
+            <div>
+              <h2>4) Internship / Summer program</h2>
+              <p title="Use this when asking about internships, summer programs, or application timelines.">Best for: programs & internship questions</p>
+            </div>
+            <button class="copy-btn" type="button" data-copy="t4" onclick="copyTemplate('t4')" title="Copy this template">Copy</button>
+          </div>
+          <div class="codebox" id="t4">Subject: Question about [Program/Internship Name] (Virginia student)
+
+Hello [Program Coordinator/Name],
+
+My name is [Your Name], and I’m a high school student in [City], Virginia interested in law and public service.
+
+I’m considering applying to [Program/Internship Name]. Could you share the best way to learn about eligibility, deadlines, and what strong applicants typically have? If there’s an info session or webpage you recommend, I’d love to review it.
+
+Thank you for your help.
+
+Best regards,
+[Your Full Name]
+[School Name] • [City, VA]</div>
+        </div>
+
+        <div class="template-card">
+          <div class="template-head">
+            <div>
+              <h2>5) Follow-up (7–10 days later)</h2>
+              <p title="Use once if you didn’t get a reply. Keep it short.">Best for: one polite follow-up</p>
+            </div>
+            <button class="copy-btn" type="button" data-copy="t5" onclick="copyTemplate('t5')" title="Copy this template">Copy</button>
+          </div>
+          <div class="codebox" id="t5">Subject: Follow-up — student request
 
 Hello [Title] [Last Name],
 
@@ -130,13 +187,15 @@ I’m following up on my email from [date]. If you’re able to share any guidan
 Thank you again for your time.
 
 Sincerely,
-[Your Full Name]
-      </pre>
+[Your Full Name]</div>
+        </div>
+
+      </div>
     </section>
 
     <div class="cta">
       <a class="button primary" href="resources.html">Back to resources →</a>
-      <a class="button" href="contact.html">Suggest an improvement →</a>
+      <a class="button" href="contact.html">Send feedback →</a>
     </div>
   </div>
 </main>
@@ -161,5 +220,21 @@ Sincerely,
   </div>
 </footer>
 
+<script>
+function copyTemplate(id){
+  const el = document.getElementById(id);
+  const text = el.innerText;
+  navigator.clipboard.writeText(text).then(()=>{
+    const btn = document.querySelector('[data-copy="'+id+'"]');
+    if(!btn) return;
+    const old = btn.innerText;
+    btn.innerText = "Copied!";
+    setTimeout(()=>btn.innerText=old, 900);
+  });
+}
+function printTemplates(){
+  window.print();
+}
+</script>
 </body>
 </html>
