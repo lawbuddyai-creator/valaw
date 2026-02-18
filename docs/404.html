@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>VALaw Careers • Page Not Found</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Reuse the same JavaScript to power the search and mobile nav -->
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <a class="visually-hidden" href="#main">Skip to content</a>
+    <!-- Header with navigation and search -->
+    <header>
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="brand-badge" aria-hidden="true">⚖️</span>
+          <span>VALaw Careers</span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <nav aria-label="Primary navigation">
+          <ul>
+            <li><a href="path.html">Path</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="extracurriculars.html">Extracurriculars</a></li>
+            <li><a href="colleges.html">Colleges</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="emails.html">Emails</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="search-wrapper">
+          <label for="search-input-404" class="visually-hidden">Search the site</label>
+          <input
+            type="search"
+            id="search-input-404"
+            placeholder="Search..."
+            aria-label="Search the site"
+            autocomplete="off"
+          />
+          <div class="search-results" id="search-results-404"></div>
+        </div>
+      </div>
+    </header>
+    <!-- Main content -->
+    <main id="main">
+      <section class="hero">
+        <div class="container">
+          <h1>Page Not Found</h1>
+          <p>
+            Oops! The page you're looking for doesn't exist or has been moved.
+            Try using the search above or explore some of our most popular pages
+            below.
+          </p>
+          <div class="cta">
+            <a class="button" href="index.html">Return home</a>
+            <a class="button secondary" href="resources.html">Browse resources</a>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <h2>Popular Pages</h2>
+          <ul class="link-list">
+            <li><a href="path.html">Path to Law</a></li>
+            <li><a href="classes.html">Recommended Classes</a></li>
+            <li><a href="extracurriculars.html">Extracurriculars</a></li>
+            <li><a href="colleges.html">Top Colleges</a></li>
+            <li><a href="emails.html">Email Templates</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-row">
+          <div class="small">© 2026 VALaw Careers • Built for Virginia students.</div>
+          <div class="footer-links small">
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-meta">
+          <div class="small">
+            Supporting Virginia’s next generation of legal professionals.
+          </div>
+        </div>
+        <p class="small" style="margin-top: 10px">
+          Disclaimer: Educational information only. Not legal advice.
+        </p>
+      </div>
+    </footer>
+    <!-- Inline script to connect search input and results on 404 page -->
+    <script>
+      // Immediately invoke search functionality for the 404 page using the same array as defined in script.js
+      document.addEventListener("DOMContentLoaded", function () {
+        const input = document.getElementById("search-input-404");
+        const results = document.getElementById("search-results-404");
+        function updateResults() {
+          const query = input.value.toLowerCase();
+          results.innerHTML = "";
+          // Always pull the latest page data from the global object in case
+          // it loads after this script runs. Fallback to an empty array.
+          const pageData = window._pageData || [];
+          if (!query || query.length < 2) {
+            results.classList.remove("active");
+            return;
+          }
+          const matches = pageData.filter((item) =>
+            (item.title + item.description)
+              .toLowerCase()
+              .includes(query)
+          );
+          if (matches.length === 0) {
+            results.classList.add("active");
+            const noMatch = document.createElement("div");
+            noMatch.className = "search-result";
+            noMatch.textContent = "No results found";
+            results.appendChild(noMatch);
+            return;
+          }
+          results.classList.add("active");
+          matches.forEach((item) => {
+            const link = document.createElement("a");
+            link.href = item.url;
+            link.className = "search-result";
+            link.textContent = item.title;
+            results.appendChild(link);
+          });
+        }
+        input.addEventListener("input", updateResults);
+        document.addEventListener("click", function (e) {
+          if (!results.contains(e.target) && e.target !== input) {
+            results.classList.remove("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
