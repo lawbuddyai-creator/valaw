@@ -3,12 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Contact VA Law, send feedback or suggest resources." />
-    <meta name="keywords" content="contact, feedback, mentorship, questions" />
-    <title>VA Law • Contact</title>
+    <meta name="description" content="Contact VA Law with questions, feedback, partnership ideas, or resource suggestions for Virginia high school students interested in law." />
+    <meta name="keywords" content="contact VA Law, law student questions, pre-law feedback, Virginia law outreach" />
+    <title>Contact VA Law | Questions, Feedback, and Partnerships</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
-  </head>
+      <link rel="canonical" href="https://www.valawhs.com/contact.html" />
+    <meta property="og:title" content="Contact VA Law | Questions, Feedback, and Partnerships" />
+    <meta property="og:description" content="Contact VA Law with questions, feedback, partnership ideas, or resource suggestions for Virginia high school students interested in law." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.valawhs.com/contact.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+</head>
   <body>
     <a class="visually-hidden" href="#main">Skip to content</a>
     <header>
@@ -32,7 +38,7 @@
         </nav>
         <div class="search-wrapper">
           <label for="search-input" class="visually-hidden">Search the site</label>
-          <input type="search" id="search-input" placeholder="Search..." aria-label="Search the site" autocomplete="off" />
+          <input type="search" id="search-input" placeholder="Search VA Law..." aria-label="Search the site" autocomplete="off" />
           <div class="search-results" id="search-results"></div>
         </div>
       </div>
@@ -40,10 +46,9 @@
     <main id="main">
       <section class="hero">
         <div class="container">
-          <h1>Contact Us</h1>
+          <h1>Contact VA Law</h1>
           <p>
-            We’d love to hear from you. Get in touch with questions, feedback or
-            collaboration ideas.
+            Have a question, a resource suggestion, or an idea for collaboration? Send a message and we’ll do our best to reply soon.
           </p>
         </div>
       </section>
@@ -55,7 +60,12 @@
             share your story? Send us a message using the form below. We aim to
             respond within a few business days.
           </p>
-          <form action="https://formspree.io/f/mnqkzgyv" method="POST" style="max-width: 600px; margin: 0 auto">
+          <form action="https://formspree.io/f/mnqkzgyv" method="POST" style="max-width: 600px; margin: 0 auto" class="contact-form">
+            <input type="hidden" name="_subject" value="New VA Law contact form submission" />
+            <div class="hp-field" aria-hidden="true">
+              <label for="website">Leave this field blank</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
             <div style="margin-bottom: 1rem">
               <label for="name" style="display:block; margin-bottom:0.3rem">Name</label>
               <input type="text" id="name" name="name" required style="width:100%; padding:0.5rem; border-radius:4px; border:1px solid var(--color-bg-alt); background-color: var(--color-surface); color: var(--color-text);" />
@@ -70,7 +80,8 @@
             </div>
             <button type="submit" class="button">Send Message</button>
           </form>
-          <p style="margin-top: 2rem">Prefer not to use the form? You can also email us at <a href="mailto:lawbuddyai@gmail.com">lawbuddyai@gmail.com</a>.</p>
+          <p class="small form-note">Please do not include sensitive personal information in your message. Form submissions are processed securely by Formspree.</p>
+          <p style="margin-top: 2rem">Prefer not to use the form? You can also <a href="#" id="email-link" data-user="hello" data-domain="valawhs.com">email us directly</a>.</p>
         </div>
       </section>
     </main>
@@ -90,8 +101,11 @@
         </div>
         <p class="small" style="margin-top: 10px">Disclaimer: Educational information only. Not legal advice.</p>
       </div>
-    
-<p class="small">Follow us on TikTok: <a href="https://www.tiktok.com/@valawhs" target="_blank">@valawhs</a></p>
-</footer>
+
+        <div class="footer-social small">
+          <span>Follow us:</span>
+          <a href="https://www.tiktok.com/@valawhs" target="_blank" rel="noopener noreferrer" aria-label="Follow VA Law on TikTok">@valawhs on TikTok</a>
+        </div>
+    </footer>
   </body>
 </html>

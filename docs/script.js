@@ -170,3 +170,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const emailLink = document.getElementById("email-link");
+  if (emailLink) {
+    const user = emailLink.getAttribute("data-user");
+    const domain = emailLink.getAttribute("data-domain");
+    if (user && domain) {
+      const email = `${user}@${domain}`;
+      emailLink.setAttribute("href", `mailto:${email}`);
+      emailLink.textContent = email;
+    }
+  }
+
+  document.querySelectorAll('a[target="_blank"]').forEach((link) => {
+    const currentRel = (link.getAttribute("rel") || "").split(/\s+/).filter(Boolean);
+    ["noopener", "noreferrer"].forEach((token) => {
+      if (!currentRel.includes(token)) {
+        currentRel.push(token);
+      }
+    });
+    link.setAttribute("rel", currentRel.join(" "));
+  });
+});
