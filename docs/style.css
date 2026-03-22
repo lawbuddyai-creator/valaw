@@ -608,87 +608,76 @@ footer .footer-links a {
   border: 0;
 }
 
-/* UX polish and form protection */
-:focus-visible {
-  outline: 3px solid var(--color-primary-light);
-  outline-offset: 3px;
+/* Product and action upgrades */
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 0.85rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(124, 77, 255, 0.16);
+  color: var(--color-primary-light);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
-p,
-li,
-label {
-  overflow-wrap: anywhere;
-}
-
-.contact-form {
-  background: var(--color-surface);
-  padding: 1.25rem;
+.callout {
   border-radius: 14px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
 }
 
-.contact-form input,
-.contact-form textarea {
-  font: inherit;
-}
-
-.form-note {
-  max-width: 600px;
-  margin: 1rem auto 0;
-  color: var(--color-text-muted);
+.center-callout {
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
-.hp-field {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+.split-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 1.25rem;
+  align-items: start;
 }
 
-.footer-social {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
-  margin-top: 0.5rem;
+.stack-form {
+  display: grid;
+  gap: 1rem;
 }
 
-.footer-social a {
-  color: var(--color-link);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+.stack-form select,
+.stack-form input,
+.stack-form textarea {
+  width: 100%;
+  margin-top: 0.45rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-bg);
+  background: var(--color-surface);
+  color: var(--color-text);
 }
 
-.hero .container,
-.section .container,
-.newsletter .container {
-  max-width: 1100px;
+.plan-output {
+  min-height: 100%;
 }
 
-.card p:last-child,
-.card ul:last-child {
-  margin-bottom: 0;
+.compact-list li {
+  margin-bottom: 1rem;
+}
+
+.copy-template {
+  margin-top: 0.85rem;
 }
 
 pre {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 12px;
   padding: 1rem;
+  background: #171721;
 }
 
 .small {
   font-size: 0.92rem;
 }
 
-@media (max-width: 768px) {
-  .contact-form {
-    padding: 1rem;
-  }
-
-  .footer-social {
-    justify-content: center;
+@media (max-width: 900px) {
+  .split-layout {
+    grid-template-columns: 1fr;
   }
 }
