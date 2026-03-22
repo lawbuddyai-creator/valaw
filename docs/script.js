@@ -1,5 +1,5 @@
 /*
- * Main JavaScript for the enhanced VALaw Careers site
+ * Main JavaScript for the enhanced VA Law site
  *
  * This script powers interactive features such as the mobile
  * navigation toggle, internal search, progress tracking on the
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
       keywords: ['email templates', 'outreach', 'follow‑up']
     },
     {
-      title: 'About VALaw Careers',
+      title: 'About VA Law',
       url: 'about.html',
       description: 'Mission, who we are and how to get involved',
       keywords: ['mission', 'team', 'contact']
