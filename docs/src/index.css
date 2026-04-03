@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 222 60% 22%;
+    --primary-foreground: 45 100% 96%;
+
+    --secondary: 45 80% 55%;
+    --secondary-foreground: 222 60% 15%;
+
+    --muted: 220 15% 92%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 45 80% 55%;
+    --accent-foreground: 222 60% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 222 60% 22%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --navy: 222 60% 22%;
+    --navy-light: 222 40% 35%;
+    --gold: 45 80% 55%;
+    --gold-light: 45 90% 70%;
+    --gold-dark: 40 70% 42%;
+    --cream: 45 40% 96%;
+    --warm-gray: 220 10% 55%;
+    --hero-gradient: linear-gradient(135deg, hsl(222 60% 18%) 0%, hsl(222 50% 28%) 50%, hsl(240 30% 22%) 100%);
+    --card-shadow: 0 4px 24px -4px hsl(222 60% 22% / 0.08);
+    --card-shadow-hover: 0 12px 40px -8px hsl(222 60% 22% / 0.15);
+    --gold-glow: 0 0 30px hsl(45 80% 55% / 0.3);
+
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-hero {
+    background: var(--hero-gradient);
+  }
+  .shadow-card {
+    box-shadow: var(--card-shadow);
+  }
+  .shadow-card-hover {
+    box-shadow: var(--card-shadow-hover);
+  }
+  .glow-gold {
+    box-shadow: var(--gold-glow);
+  }
+}
